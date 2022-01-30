@@ -1,0 +1,244 @@
+@import url("./reset.css");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #f7f7f7;
+  background-color: #222;
+}
+.container {
+  background-color: #222;
+}
+
+/* Header */
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header h1::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/seta-contrario.svg");
+  background-size: cover;
+}
+
+.header a {
+  color: #f7f7f7;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu a {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #444;
+  transition: 0.3s ease-in;
+}
+
+/* Sobre */
+.sobre {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 0 20px;
+  display: grid;
+  grid-template-columns: minmax(160px, 600px) 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.titulo {
+  font-size: 4rem;
+  font-family: "IBM Plex Mono", monospace;
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sobre h1::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/seta.svg");
+  background-size: cover;
+}
+
+.sobre-texto p {
+  font-size: 1.5rem;
+  font-family: "IBM Plex Mono", monospace;
+  padding: 40px 0;
+}
+
+/* Faq */
+.faq {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: 1fr minmax(160px, 600px);
+  align-items: center;
+  gap: 40px;
+  margin-top: 100px;
+}
+
+.faq h1 {
+  grid-column: 2;
+  justify-content: end;
+}
+
+.faq h1::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/seta-contrario.svg");
+  background-size: cover;
+}
+
+.faq-imagem {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.faq-perguntas {
+  grid-column: 1 / 3;
+}
+
+dt {
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  background: #444;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s ease-in;
+}
+
+.menu a:hover,
+dt:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+dt::after {
+  content: "⯆";
+  display: inline-block;
+  transition: 0.3s ease-in;
+}
+
+dt:hover::after {
+  content: "⯅";
+}
+
+dt.ativo::after {
+  content: "⯅";
+}
+
+dd {
+  font-family: "IBM Plex Mono", monospace;
+  display: none;
+  padding: 20px 10px 0 10px;
+}
+
+dd.ativo {
+  display: block;
+  animation: show 0.8s forwards;
+}
+
+dt {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10px, -10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Contato */
+.contato {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 20px 50px 20px;
+  display: grid;
+  grid-template-columns: minmax(160px, 600px) 1fr;
+  align-items: center;
+  gap: 40px;
+  margin: 100px 0;
+}
+
+.contato h1::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/seta.svg");
+  background-size: cover;
+}
+
+.contato-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contato-lista a {
+  text-decoration: none;
+  color: #f7f7f7;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.contato-lista a::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 6px;
+  background-color: #f7f7f7;
+}
+
+.contato-lista a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Footer */
+.footer {
+  max-width: 1200px;
+  margin: 100px auto 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: "IBM Plex Mono", monospace;
+}
