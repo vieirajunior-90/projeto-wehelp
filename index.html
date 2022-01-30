@@ -5,22 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="./img/seta-contrario.svg" type="image/svg">
+    <title>Wehelp</title>
 </head>
 <body>
     <div class="container">
         <header class="header" id="header">
             <h1><a href="./">Wehelp</a></h1>
             <nav>
-                <ul class="menu">
+                <ul class="menu" role="menu">
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#faq">Faq</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
+            <button class="botao-menu" aria-label="abrir menu" aria-controls="menu" aria-expanded="true" aria-haspopup="true"><span><img src="./img/menu_white_24dp.svg" alt="" width="40px" height="45px"></span></button>
         </header>
 
-        <section class="sobre" id="sobre">
+        <section class="sobre scroll" id="sobre">
             <div class="sobre-texto">
                 <h1 class="titulo">SOBRE</h1>
                 <p>A Wehelp é uma empresa consolidada no mercado, reconhecida mundialmente.
@@ -28,11 +30,11 @@
                 </p>
             </div>
             <div class="sobre-imagem">
-                <img src="img/gone-shopping.svg" alt="go shopping" width="440px">
+                <img src="img/gone-shopping.svg" alt="go shopping" width="400px">
             </div>
         </section>
         
-        <section class="faq" id="faq">
+        <section class="faq js-scroll" id="faq">
             <h1 class="titulo">FAQ</h1>
             <dl class="faq-perguntas">
                 <dt>Qual a forma de pagamento ?</dt>
@@ -45,11 +47,11 @@
                 <dd>Todos os nossos produtos possuem uma garantia de 1 ano.</dd>
             </dl>
             <div class="faq-imagem">
-                <img src="img/faq.svg" alt="faq" width="440px">
+                <img src="img/faq.svg" alt="faq" width="400px">
             </div>
         </section>
 
-        <section class="contato" id="contato">
+        <section class="contato js-scroll" id="contato">
             <div class="contato-texto">
                 <h1 class="titulo">CONTATO</h1>
                 <ul class="contato-lista">
@@ -59,12 +61,12 @@
                 </ul>
             </div>
             <div class="contato-imagem">
-                <img src="img/contato.svg" alt="contato" width="440px">
+                <img src="img/contato.svg" alt="contato" width="400px">
             </div>
         </section>
 
         <footer class="footer">
-            <p>&copy; Wehelp - Todos os direitos reservados</p>
+            <p>&copy; Wehelp - Alguns direitos reservados</p>
         </footer>
     </div>
     <script src="script.js"></script>

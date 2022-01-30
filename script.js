@@ -30,5 +30,43 @@ function initLinksInternos () {
     }
 }
 
+function initScrolAnimacao () {
+    const $sections = document.querySelectorAll('.js-scroll');
+
+    if ($sections.length) {
+        window.addEventListener('scroll', scrollToSection);
+
+        function scrollToSection(event) {
+            $sections.forEach(section => {
+                const $top60 = window.innerHeight * 0.6;
+                const $sectionTop = section.getBoundingClientRect().top;
+                const $isSectionVisible = ($sectionTop - $top60) < 0;
+                if ($isSectionVisible) {
+                    section.classList.add('ativo');
+                }
+            });
+        }
+    }
+}
+
+const $botaoMenu = document.querySelector('.botao-menu');
+
+$botaoMenu.addEventListener('click', toggleMenu);
+
+function toggleMenu() {
+    const $menu = document.querySelector('nav');
+    const $h1Title = document.querySelector('.sobre h1');
+    $menu.classList.toggle('ativo');
+
+
+    if ($menu.classList.contains('ativo')) {
+        $h1Title.classList.add('ativo');
+    } else{
+        $h1Title.classList.remove('ativo');
+    }
+}
+
+
 initLinksInternos();
 initFaqPerguntas();
+initScrolAnimacao();
