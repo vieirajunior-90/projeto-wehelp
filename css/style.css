@@ -26,7 +26,7 @@ body {
   gap: 10px;
 }
 
-.header h1 a{
+.header h1 a {
   font-size: 2.5rem;
 }
 
@@ -73,7 +73,7 @@ body {
   gap: 40px;
 }
 
-p{
+p {
   font-size: 2rem;
   font-family: "IBM Plex Mono", monospace;
   color: #f7f7f7;
@@ -122,17 +122,17 @@ p{
     object-fit: cover;
   }
 
-  .sobre-texto p{
+  .sobre-texto p {
     margin-top: 50px;
   }
 }
 
 @media (max-width: 568px) {
-  .header{
+  .header {
     position: relative;
   }
 
-  nav{
+  nav {
     display: none;
     position: absolute;
     top: 68px;
@@ -140,7 +140,7 @@ p{
     z-index: 1;
   }
 
-  nav.ativo{
+  nav.ativo {
     display: block;
     animation: show 0.5s ease-in-out;
   }
@@ -189,7 +189,7 @@ p{
     background-image: none;
   }
 
-  p{
+  p {
     font-size: 1.5rem;
   }
 }
@@ -231,7 +231,7 @@ p{
 }
 
 dt,
-dd{
+dd {
   font-size: 1.5rem;
   font-family: "IBM Plex Mono", monospace;
   color: #f7f7f7;
@@ -244,9 +244,11 @@ dt {
   background: #444;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   cursor: pointer;
   margin-top: 20px;
   transition: 0.3s ease-in;
+  position: relative;
 }
 
 .menu a:hover,
@@ -255,17 +257,35 @@ dt:hover {
 }
 
 dt::after {
-  content: "⮟";
+  content: "";
   display: inline-block;
-  transition: 0.3s ease-in;
+  width: 14px;
+  height: 6px;
+  margin-right: 10px;
+  background: url('../img/seta-abrir.svg') no-repeat center;
+  transition: 0.3s;
 }
 
 dt:hover::after {
-  content: "⮝";
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 6px;
+  padding-right: 10px;
+  background: url('../img/seta-abrir.svg') no-repeat center;
+  transform: rotate(180deg);
+  transition: 0.3s;
 }
 
 dt.ativo::after {
-  content: "⮝";
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 6px;
+  padding-right: 10px;
+  transform: rotate(180deg);
+  background: url('../img/seta-abrir.svg') no-repeat center;
+  transition: 0.3s;
 }
 
 dd {
