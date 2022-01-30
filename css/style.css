@@ -21,17 +21,20 @@ body {
 }
 
 .header h1 {
-  font-size: 2rem;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+.header h1 a{
+  font-size: 2.5rem;
+}
+
 .header h1::before {
   content: "";
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   background-image: url("../img/seta-contrario.svg");
   background-size: cover;
 }
@@ -41,6 +44,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   font-family: "IBM Plex Mono", monospace;
+  font-size: 1.5rem;
 }
 
 .menu {
@@ -51,7 +55,7 @@ body {
 }
 
 .menu a {
-  padding: 5px 10px;
+  padding: 10px;
   border-radius: 5px;
   background-color: #444;
   transition: 0.3s ease-in;
@@ -67,6 +71,13 @@ body {
   grid-template-columns: minmax(160px, 600px) minmax(300px, 400px);
   align-items: center;
   gap: 40px;
+}
+
+p{
+  font-size: 2rem;
+  font-family: "IBM Plex Mono", monospace;
+  color: #f7f7f7;
+  line-height: 1.33;
 }
 
 .titulo {
@@ -85,12 +96,6 @@ body {
   height: 40px;
   background-image: url("../img/seta.svg");
   background-size: cover;
-}
-
-.sobre-texto p {
-  font-size: 1.5rem;
-  font-family: "IBM Plex Mono", monospace;
-  padding: 40px 0;
 }
 
 .botao-menu {
@@ -116,9 +121,13 @@ body {
     justify-self: center;
     object-fit: cover;
   }
+
+  .sobre-texto p{
+    margin-top: 50px;
+  }
 }
 
-@media (max-width: 468px) {
+@media (max-width: 568px) {
   .header{
     position: relative;
   }
@@ -175,13 +184,16 @@ body {
   .titulo {
     font-size: 3.125rem;
   }
-}
 
-@media (max-width: 330px) {
   .sobre h1.ativo::after {
     background-image: none;
   }
+
+  p{
+    font-size: 1.5rem;
+  }
 }
+
 /* Faq */
 .faq {
   max-width: 1200px;
@@ -214,7 +226,16 @@ body {
 }
 
 .faq-perguntas {
+  margin-top: 50px;
   grid-column: 1 / 3;
+}
+
+dt,
+dd{
+  font-size: 1.5rem;
+  font-family: "IBM Plex Mono", monospace;
+  color: #f7f7f7;
+  line-height: 1.33;
 }
 
 dt {
@@ -234,17 +255,17 @@ dt:hover {
 }
 
 dt::after {
-  content: "⯆";
+  content: "⮟";
   display: inline-block;
   transition: 0.3s ease-in;
 }
 
 dt:hover::after {
-  content: "⯅";
+  content: "⮝";
 }
 
 dt.ativo::after {
-  content: "⯅";
+  content: "⮝";
 }
 
 dd {
@@ -306,16 +327,17 @@ dt {
 }
 
 .contato-lista {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.contato-lista a {
+.contato-lista li a {
   text-decoration: none;
   color: #f7f7f7;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -351,8 +373,8 @@ dt {
     padding-top: 20px;
   }
 
-  .contato-lista a {
-    font-size: 1.125rem;
+  .contato-lista li a {
+    font-size: 1.25rem;
   }
 
   .contato {
